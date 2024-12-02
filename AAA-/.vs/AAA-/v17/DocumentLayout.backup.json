@@ -1,10 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\git\\AAA-\\",
+  "WorkspaceRootPath": "E:\\git\\AAA-\\AAA-\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{192321D3-6E60-4DCA-A790-F56C016C2E8C}|AAA-\\AAA-.vcxproj|E:\\git\\AAA-\\AAA-\\AAA-.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{192321D3-6E60-4DCA-A790-F56C016C2E8C}|AAA-\\AAA-.vcxproj|solutionrelative:AAA-\\AAA-.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{DC1CA52F-345A-4B46-9A24-FC80E54C0EC5}|test_tools\\test_tools.vcxproj|E:\\git\\AAA-\\AAA-\\test_tools\\test_tools.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DC1CA52F-345A-4B46-9A24-FC80E54C0EC5}|test_tools\\test_tools.vcxproj|solutionrelative:test_tools\\test_tools.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +14,23 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AAA-.cpp",
-              "DocumentMoniker": "E:\\git\\AAA-\\AAA-\\AAA-.cpp",
-              "RelativeDocumentMoniker": "AAA-\\AAA-.cpp",
-              "ToolTip": "E:\\git\\AAA-\\AAA-\\AAA-.cpp",
-              "RelativeToolTip": "AAA-\\AAA-.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Title": "test_tools.cpp",
+              "DocumentMoniker": "E:\\git\\AAA-\\AAA-\\test_tools\\test_tools.cpp",
+              "RelativeDocumentMoniker": "test_tools\\test_tools.cpp",
+              "ToolTip": "E:\\git\\AAA-\\AAA-\\test_tools\\test_tools.cpp",
+              "RelativeToolTip": "test_tools\\test_tools.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-29T11:23:13.701Z",
+              "WhenOpened": "2024-11-29T12:52:10.442Z",
               "EditorCaption": ""
             }
           ]
