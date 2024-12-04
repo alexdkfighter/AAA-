@@ -18,5 +18,13 @@
     <ClCompile Include="AAA-.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="start_print.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="start_print.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
