@@ -5,6 +5,8 @@
 class start_print
 {
 public:
+	int running;//用于判定开头是否已经结束
+
 	//构造函数
 	start_print();
 

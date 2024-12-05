@@ -1,39 +1,34 @@
 ﻿// AAA-.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
 
-#include <iostream>
-#include <string>
-
 #include "start_print.h"
+#include "cmd_print.h"
 
 int main()
 {
-    std::string in;
     start_print start;
     start.start_show();//模拟终端启动
     system("cls\n");
     start.menu();//开始菜单
     while (1)
     {
-        std::cin >> in;
-        if (in == "1")
+        char in = _getch();//直接获取按键
+        if (in == '1')
         {
+            start.running = 0;
             //重新开始游戏部分
         }
-        else if (in == "2")
+        else if (in == '2')
         {
+            start.running = 0;
             //存档返回（不确定是否有存档功能）
         }
-        else if (in == "3")
+        else if (in == '3')
         {
             break;
         }
         else
         {
-            //显示提示后等待输入，接收输入后重新显示菜单
-            std::cout << "能不能好好输入！\n";
-            std::cin >> in;
-            system("cls\n");
-            start.menu();
+            //我们选用按键，而不是输入然后回车
         }
     }
 }

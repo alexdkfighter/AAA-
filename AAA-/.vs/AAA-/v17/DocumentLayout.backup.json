@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "E:\\git\\AAA-\\AAA-\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{192321D3-6E60-4DCA-A790-F56C016C2E8C}|AAA-\\AAA-.vcxproj|E:\\git\\AAA-\\AAA-\\AAA-\\AAA-.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{192321D3-6E60-4DCA-A790-F56C016C2E8C}|AAA-\\AAA-.vcxproj|solutionrelative:AAA-\\AAA-.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{192321D3-6E60-4DCA-A790-F56C016C2E8C}|AAA-\\AAA-.vcxproj|E:\\git\\AAA-\\AAA-\\AAA-\\cmd_print.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{192321D3-6E60-4DCA-A790-F56C016C2E8C}|AAA-\\AAA-.vcxproj|solutionrelative:AAA-\\cmd_print.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{192321D3-6E60-4DCA-A790-F56C016C2E8C}|AAA-\\AAA-.vcxproj|E:\\git\\AAA-\\AAA-\\AAA-\\cmd_print.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{192321D3-6E60-4DCA-A790-F56C016C2E8C}|AAA-\\AAA-.vcxproj|solutionrelative:AAA-\\cmd_print.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{192321D3-6E60-4DCA-A790-F56C016C2E8C}|AAA-\\AAA-.vcxproj|E:\\git\\AAA-\\AAA-\\AAA-\\start_print.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -13,6 +17,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{192321D3-6E60-4DCA-A790-F56C016C2E8C}|AAA-\\AAA-.vcxproj|E:\\git\\AAA-\\AAA-\\AAA-\\start_print.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{192321D3-6E60-4DCA-A790-F56C016C2E8C}|AAA-\\AAA-.vcxproj|solutionrelative:AAA-\\start_print.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{192321D3-6E60-4DCA-A790-F56C016C2E8C}|AAA-\\AAA-.vcxproj|E:\\git\\AAA-\\AAA-\\AAA-\\AAA-.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{192321D3-6E60-4DCA-A790-F56C016C2E8C}|AAA-\\AAA-.vcxproj|solutionrelative:AAA-\\AAA-.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,50 +30,73 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AAA-.cpp",
+              "DocumentMoniker": "E:\\git\\AAA-\\AAA-\\AAA-\\AAA-.cpp",
+              "RelativeDocumentMoniker": "AAA-\\AAA-.cpp",
+              "ToolTip": "E:\\git\\AAA-\\AAA-\\AAA-\\AAA-.cpp",
+              "RelativeToolTip": "AAA-\\AAA-.cpp",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-12-04T06:23:15.765Z",
+              "IsPinned": true
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "start_print.cpp",
-              "DocumentMoniker": "E:\\git\\AAA-\\AAA-\\AAA-\\start_print.cpp",
-              "RelativeDocumentMoniker": "AAA-\\start_print.cpp",
-              "ToolTip": "E:\\git\\AAA-\\AAA-\\AAA-\\start_print.cpp",
-              "RelativeToolTip": "AAA-\\start_print.cpp",
-              "ViewState": "AgIAABgAAAAAAAAAAAAswCIAAAAYAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "cmd_print.cpp",
+              "DocumentMoniker": "E:\\git\\AAA-\\AAA-\\AAA-\\cmd_print.cpp",
+              "RelativeDocumentMoniker": "AAA-\\cmd_print.cpp",
+              "ToolTip": "E:\\git\\AAA-\\AAA-\\AAA-\\cmd_print.cpp",
+              "RelativeToolTip": "AAA-\\cmd_print.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-12-04T06:26:17.354Z",
+              "WhenOpened": "2024-12-05T12:43:50.06Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "cmd_print.h",
+              "DocumentMoniker": "E:\\git\\AAA-\\AAA-\\AAA-\\cmd_print.h",
+              "RelativeDocumentMoniker": "AAA-\\cmd_print.h",
+              "ToolTip": "E:\\git\\AAA-\\AAA-\\AAA-\\cmd_print.h",
+              "RelativeToolTip": "AAA-\\cmd_print.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-12-05T11:51:17.617Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "start_print.h",
               "DocumentMoniker": "E:\\git\\AAA-\\AAA-\\AAA-\\start_print.h",
               "RelativeDocumentMoniker": "AAA-\\start_print.h",
               "ToolTip": "E:\\git\\AAA-\\AAA-\\AAA-\\start_print.h",
               "RelativeToolTip": "AAA-\\start_print.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-12-04T06:25:23Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-05T11:57:59.995Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AAA-.cpp",
-              "DocumentMoniker": "E:\\git\\AAA-\\AAA-\\AAA-\\AAA-.cpp",
-              "RelativeDocumentMoniker": "AAA-\\AAA-.cpp",
-              "ToolTip": "E:\\git\\AAA-\\AAA-\\AAA-\\AAA-.cpp",
-              "RelativeToolTip": "AAA-\\AAA-.cpp",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAUAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "start_print.cpp",
+              "DocumentMoniker": "E:\\git\\AAA-\\AAA-\\AAA-\\start_print.cpp",
+              "RelativeDocumentMoniker": "AAA-\\start_print.cpp",
+              "ToolTip": "E:\\git\\AAA-\\AAA-\\AAA-\\start_print.cpp",
+              "RelativeToolTip": "AAA-\\start_print.cpp",
+              "ViewState": "AgIAACIAAAAAAAAAAAAAAD4AAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-12-04T06:23:15.765Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T06:26:17.354Z"
             }
           ]
         }
