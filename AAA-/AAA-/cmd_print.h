@@ -11,6 +11,8 @@
 #include <cstdlib>
 #include <ctime>
 #include <random>
+#include <vector>
+#include <list>
 
 
 //设定命令行输出的颜色(12红;10绿;15白)

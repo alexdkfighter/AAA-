@@ -24,21 +24,20 @@ void updateLine(int line, const std::string& text) {
 }
 
 void showGarbledText(int line, int color, const std::string& text, int& running, int garbledDuration, int clearDuration, std::mt19937& rng) {
-    // 生成乱码
-    std::string garbledText;
-    for (size_t i = 0; i < text.size(); ++i) {
-        garbledText += static_cast<char>(rng() % 256); // 生成随机字符
-    }
-
     while (running) {
         // 显示乱码
-        for (size_t i = 0; i < garbledText.size(); ++i) {
+        for (size_t i = 0; i < text.size(); ++i) {
             int randomColor = rng() % 15 + 1; // 随机颜色 (1-15)
             setColor(randomColor);
             std::string garbledText;
-            for (size_t i = 0; i < text.size(); ++i) {
-                garbledText += static_cast<char>(rng() % 256); // 生成随机字符
+            for (size_t j = 0; j < text.size(); ++j) {
+                char randomChar;
+                do {
+                    randomChar = static_cast<char>(rng() % 256); // 生成随机字符
+                } while (randomChar == '\n'); // 排除换行符
+                garbledText += randomChar;
             }
+            updateLine(line, garbledText.substr(0, i + 1)); // 逐个显示字符
             std::this_thread::sleep_for(std::chrono::milliseconds(100)); // 延迟以显示效果
         }
 
@@ -50,18 +49,6 @@ void showGarbledText(int line, int color, const std::string& text, int& running,
         // 检查是否停止
         if (running == 0) {
             break; // 如果 running 为 0，退出循环
-        }
-
-        // 再次显示乱码
-        for (size_t i = 0; i < garbledText.size(); ++i) {
-            int randomColor = rng() % 15 + 1; // 随机颜色 (1-15)
-            setColor(randomColor);
-            std::string garbledText;
-            for (size_t i = 0; i < text.size(); ++i) {
-                garbledText += static_cast<char>(rng() % 256); // 生成随机字符
-            }
-            updateLine(line, garbledText.substr(0, i + 1)); // 逐个显示字符
-            std::this_thread::sleep_for(std::chrono::milliseconds(100)); // 延迟以显示效果
         }
     }
 
