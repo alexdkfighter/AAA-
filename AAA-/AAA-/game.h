@@ -1,5 +1,6 @@
 #pragma once
 #include "cmd_print.h"
+#include "TerminalMockup.h"
 
 #pragma comment(lib, "ws2_32.lib")
 
@@ -16,6 +17,7 @@ public:
 
 private:
     TerminalInfo terminal;
+    TerminalMockup mockup;
 
 public:
     // 构造函数，要求给 struct 赋值
@@ -29,6 +31,9 @@ public:
 
     // 获取可连接 IP 字符串组
     std::vector<std::string> getConnectableIPs() const;
+
+    // 运行终端
+    void runTerminal();
 
     // 其他成员函数可以在这里添加
 };

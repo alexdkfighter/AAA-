@@ -51,10 +51,6 @@ void showGarbledText(int line, int color, const std::string& text, int& running,
             break; // 如果 running 为 0，退出循环
         }
     }
-
-    // 最后显示明文
-    setColor(color); // 设置默认颜色
-    updateLine(line, text);
 }
 
 void startGarbledTextThread(int line, int color, const std::string& text, int& running, int garbledDuration, int clearDuration) {

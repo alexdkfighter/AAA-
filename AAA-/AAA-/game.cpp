@@ -56,3 +56,8 @@ int game::getLevelProgress() const {
 std::vector<std::string> game::getConnectableIPs() const {
     return terminal.connectableIPs;
 }
+
+// 运行终端
+void game::runTerminal() {
+    mockup.run(); // 调用 TerminalMockup 的 run 方法
+}

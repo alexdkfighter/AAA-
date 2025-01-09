@@ -15,6 +15,8 @@
 #include <winsock2.h>
 #include <ws2tcpip.h>
 #include <windows.h>
+#include <sstream>
+#include <map>
 
 
 //设定命令行输出的颜色(12红;10绿;15白)

@@ -21,6 +21,7 @@ int main()
             system("cls\n");
             game new_game(-1);
             puts(new_game.getIP().c_str());
+            new_game.runTerminal();
             break;
         }
         else if (in == '2')
