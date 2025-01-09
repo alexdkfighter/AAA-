@@ -2,7 +2,6 @@
 #ifndef CMD_PRINT_H
 #define CMD_PRINT_H
 
-#include <windows.h>
 #include <iostream>
 #include <conio.h>
 #include <string>
@@ -13,6 +12,9 @@
 #include <random>
 #include <vector>
 #include <list>
+#include <winsock2.h>
+#include <ws2tcpip.h>
+#include <windows.h>
 
 
 //设定命令行输出的颜色(12红;10绿;15白)

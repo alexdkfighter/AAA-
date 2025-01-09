@@ -2,6 +2,7 @@
 
 #include "start_print.h"
 #include "cmd_print.h"
+#include "game.h"
 
 int main()
 {
@@ -16,6 +17,11 @@ int main()
         {
             start.running = 0;
             //重新开始游戏部分
+            std::this_thread::sleep_for(std::chrono::milliseconds(100));
+            system("cls\n");
+            game new_game(-1);
+            puts(new_game.getIP().c_str());
+            break;
         }
         else if (in == '2')
         {

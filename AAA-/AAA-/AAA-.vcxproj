@@ -129,10 +129,12 @@
   <ItemGroup>
     <ClCompile Include="AAA-.cpp" />
     <ClCompile Include="cmd_print.cpp" />
+    <ClCompile Include="game.cpp" />
     <ClCompile Include="start_print.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cmd_print.h" />
+    <ClInclude Include="game.h" />
     <ClInclude Include="start_print.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
