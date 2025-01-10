@@ -1,28 +1,23 @@
-#pragma once
-#include "cmd_print.h"  // 假设这是用于输出的头文件
+#ifndef TERMINALMOCKUP_H
+#define TERMINALMOCKUP_H
 
-// TerminalMockup 类用于模拟一个虚拟的 Linux 终端
+#include "cmd_print.h"
+
 class TerminalMockup {
 public:
-    // 构造函数
-    TerminalMockup();
-
-    // 启动终端模拟
-    void run();
+    TerminalMockup(const std::string& initialPath); // 构造函数，带初始路径
+    void run(); // 启动终端模拟
 
 private:
-    // 定义命令函数指针类型，接受参数
-    using CommandFunction = void (TerminalMockup::*)(const std::string&);
+    void executeCommand(const std::string& input); // 执行输入的命令
+    void command_ls(const std::string& args); // 模拟 ls 命令
+    void command_echo(const std::string& args); // 模拟 echo 命令
+    void command_cat(const std::string& args); // 模拟 cat 命令
+    void command_cd(const std::string& args); // 模拟 cd 命令
 
-    // 存储命令与其对应处理函数的映射
-    std::map<std::string, CommandFunction> commands;
-
-    // 执行输入的命令
-    void executeCommand(const std::string& input);
-
-    // 模拟 ls 命令，接受参数但不使用
-    void command_ls(const std::string& args);
-
-    // 模拟 echo 命令，接受参数
-    void command_echo(const std::string& args);
+    std::map<std::string, void (TerminalMockup::*)(const std::string&)> commands; // 命令映射
+    std::filesystem::path currentPath; // 当前工作目录
+    std::string currentPathStr; // 初始工作目录
 };
+
+#endif // TERMINALMOCKUP_H

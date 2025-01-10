@@ -58,6 +58,7 @@ std::vector<std::string> game::getConnectableIPs() const {
 }
 
 // 运行终端
-void game::runTerminal() {
-    mockup.run(); // 调用 TerminalMockup 的 run 方法
+void game::runTerminal(std::string initialPath) {
+    TerminalMockup mockup(initialPath);
+    mockup.run();
 }

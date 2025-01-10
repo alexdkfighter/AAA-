@@ -17,7 +17,6 @@ public:
 
 private:
     TerminalInfo terminal;
-    TerminalMockup mockup;
 
 public:
     // 构造函数，要求给 struct 赋值
@@ -33,7 +32,7 @@ public:
     std::vector<std::string> getConnectableIPs() const;
 
     // 运行终端
-    void runTerminal();
+    void runTerminal(std::string initialPath);
 
     // 其他成员函数可以在这里添加
 };

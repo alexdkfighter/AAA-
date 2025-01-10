@@ -17,11 +17,12 @@ int main()
         {
             start.running = 0;
             //重新开始游戏部分
-            std::this_thread::sleep_for(std::chrono::milliseconds(100));
+            std::this_thread::sleep_for(std::chrono::milliseconds(1000));
             system("cls\n");
             game new_game(-1);
             puts(new_game.getIP().c_str());
-            new_game.runTerminal();
+            std::string initialPath = "."; // 默认初始路径
+            new_game.runTerminal(initialPath);
             break;
         }
         else if (in == '2')
