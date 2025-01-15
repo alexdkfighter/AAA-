@@ -3,21 +3,50 @@
 
 #include "cmd_print.h"
 #include "Maze.h"
-#include <conio.h> // 包含 _getch() 所需的头文件
+#include <conio.h> // 包含 _getch() 函数的头文件
 
 int main() {
-    int width = 21; // 迷宫宽度
-    int height = 21; // 迷宫高度
-    Maze maze(width, height); // 创建迷宫对象
+    // 示例 1: 使用系统生成的迷宫
+    int width = 21;
+    int height = 21;
+    Maze maze1(width, height, MazeType::GENERATED);
 
-    char command; // 用户输入的命令
+    char command;
     while (true) {
-        system("cls"); // 清屏
-        maze.displayMaze(); // 显示迷宫
+        system("cls");
+        maze1.displayMaze();
         std::cout << "请输入移动方向 (w: 上, s: 下, a: 左, d: 右, q: 退出): ";
-        command = _getch(); // 获取用户输入
-        maze.move(command); // 移动玩家
+        command = _getch(); // 使用 _getch() 获取单个字符输入
+        if (maze1.move(command)) {
+            break;
+        }
     }
 
-    return 0; // 返回0，结束程序
+    // 示例 2: 使用用户提供的迷宫
+    std::vector<std::vector<char>> providedMaze = {
+        {'#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'},
+        {'#', ' ', ' ', ' ', '#', ' ', ' ', ' ', ' ', ' ', '#'},
+        {'#', '#', '#', ' ', '#', '#', '#', '#', '#', ' ', '#'},
+        {'#', ' ', ' ', ' ', ' ', ' ', ' ', '#', ' ', ' ', '#'},
+        {'#', ' ', '#', '#', '#', ' ', '#', '#', ' ', '#', '#'},
+        {'#', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '#'},
+        {'#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'}
+    };
+
+    width = 11;
+    height = 7;
+
+    Maze maze2(width, height, MazeType::PROVIDED, providedMaze);
+
+    while (true) {
+        system("cls");
+        maze2.displayMaze();
+        std::cout << "请输入移动方向 (w: 上, s: 下, a: 左, d: 右, q: 退出): ";
+        command = _getch(); // 使用 _getch() 获取单个字符输入
+        if (maze2.move(command)) {
+            break;
+        }
+    }
+
+    // 继续用户输入和移动逻辑...
 }
