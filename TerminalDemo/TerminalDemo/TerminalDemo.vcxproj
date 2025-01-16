@@ -129,6 +129,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="cmd_print.cpp" />
+    <ClCompile Include="MatrixCipher.cpp" />
     <ClCompile Include="Maze.cpp" />
     <ClCompile Include="TerminalDemo.cpp">
       <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdcpp17</LanguageStandard>
@@ -137,6 +138,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cmd_print.h" />
+    <ClInclude Include="MatrixCipher.h" />
     <ClInclude Include="Maze.h" />
     <ClInclude Include="TerminalMockup.h" />
   </ItemGroup>
