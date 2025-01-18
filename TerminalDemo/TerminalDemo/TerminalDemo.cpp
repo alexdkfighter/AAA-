@@ -1,9 +1,11 @@
-﻿#include "TerminalMockup.h"
-#include <windows.h>
-#include <iostream>
-
-int main() {
+﻿/*int main() {
 	SetConsoleOutputCP(936);
 	TerminalMockup terminal(".");
+	terminal.run();
+}*/
+
+#include "TextTerminal.h"
+int main() {
+	TextTerminal terminal;
 	terminal.run();
 }
