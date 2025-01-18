@@ -1,5 +1,9 @@
-﻿#include "TimeApp.h"
+﻿#include "TerminalMockup.h"
+#include <windows.h>
+#include <iostream>
 
 int main() {
-    TimeStart(20);
+	SetConsoleOutputCP(936);
+	TerminalMockup terminal(".");
+	terminal.run();
 }
