@@ -30,6 +30,9 @@
     <ClCompile Include="MatrixCipher.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="TimeApp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TerminalMockup.h">
@@ -42,6 +45,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="MatrixCipher.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeApp.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
