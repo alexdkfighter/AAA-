@@ -4,8 +4,9 @@
 	terminal.run();
 }*/
 
-#include "TextTerminal.h"
+#include "TerminalMockup.h"
 int main() {
-	TextTerminal terminal;
+	TerminalMockup terminal(".");
+	terminal.findBoss();
 	terminal.run();
 }

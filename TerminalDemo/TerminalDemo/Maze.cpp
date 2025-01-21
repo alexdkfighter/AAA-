@@ -1,4 +1,8 @@
 #include "Maze.h"
+#include "TerminalMockup.h"
+#include "MatrixCipher.h"
+#include "TextTerminal.h"
+#include "cmd_print.h"
 
 Maze::Maze(int w, int h, MazeType type, const std::vector<std::vector<char>>& providedMaze)
     : width(w), height(h), playerX(1), playerY(1) {
@@ -46,7 +50,7 @@ void Maze::carvePath(int x, int y) {
 }
 
 bool Maze::isValidMove(int x, int y) const {
-    return (x > 0 && x < width && y > 0 && y < height && maze[y][x] != '#');
+    return (x > 0 && x < width && y > 0 && y < height && (maze[y][x] == ' ' || maze[y][x] == 'E'));
 }
 
 void Maze::displayMaze() const {
@@ -79,10 +83,47 @@ int Maze::move(char direction) {
         maze[playerY][playerX] = '@'; // 更新新位置
 
         if (isAtExit()) {
-            std::cout << "恭喜你到达终点！" << std::endl;
+            setColor(12);
+            std::cout << "进攻已完成" << std::endl;
+            setColor(15);
             return 1;
         }
+        return 0;
     }
+
+    if (maze[newY][newX] == '*') {
+        std::vector<std::wstring> lines1 = {
+        L"快点",
+        L"canary这么简单可难不住你"
+        };
+
+        TextTerminal text1(lines1);
+        text1.run();
+        system("cls");
+        MatrixCipher cipher(8); // 创建MatrixCipher对象 
+        cipher.displayMatrix(); // 显示加密矩阵 
+        cipher.displayKey(); // 显示密钥 
+        if (cipher.decipher()) { // 进行破译操作
+            maze[playerY][playerX] = ' '; // 清除旧位置
+            playerX = newX;
+            playerY = newY;
+            maze[playerY][playerX] = '@'; // 更新新位置
+        }
+        return 0;
+    }
+
+    if (maze[newY][newX] == '$') {
+        std::vector<std::wstring> lines = {
+        L"这里是哪个终端？"
+        };
+
+        TextTerminal text(lines);
+        text.run();
+        TerminalMockup Dterminal(".");
+        Dterminal.run();
+        return 0;
+    }
+    return 0;
 }
 
 bool Maze::isAtExit() const {

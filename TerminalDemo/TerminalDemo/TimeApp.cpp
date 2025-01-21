@@ -5,6 +5,7 @@
 
 std::atomic<bool> countdownStarted(false);
 int globalTime = 30;
+int globalStart = 0;
 
 LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) {
     static HWND hButton; // 按钮句柄
@@ -17,7 +18,7 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) 
         // 创建按钮并保存句柄
         hButton = CreateWindow(
             L"BUTTON",  // 按钮类名
-            L"开始倒计时", // 按钮文本
+            L"开始", // 按钮文本
             WS_TABSTOP | WS_VISIBLE | WS_CHILD | BS_DEFPUSHBUTTON, // 样式
             50,         // x位置
             100,        // y位置
@@ -33,7 +34,7 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) 
             if (!countdownStarted) {
                 countdownStarted = true;
                 ShowWindow(hButton, SW_HIDE); // 隐藏按钮
-                std::cout << "倒计时开始!" << std::endl; // 在命令行输出信息
+                globalStart = 1; // 在命令行输出信息
 
                 // 启动倒计时线程
                 std::thread([hwnd]() {

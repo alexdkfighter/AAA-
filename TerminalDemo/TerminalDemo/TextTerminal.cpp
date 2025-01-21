@@ -32,7 +32,6 @@ LRESULT CALLBACK TextTerminal::WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, L
     if (terminal != nullptr) {
         switch (uMsg) {
         case WM_CREATE: {
-            terminal->InitializeLines();
             terminal->SetTimerForLines();
             return 0;
         }
@@ -77,17 +76,17 @@ LRESULT CALLBACK TextTerminal::WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, L
     return DefWindowProc(hwnd, uMsg, wParam, lParam);
 }
 
-void TextTerminal::InitializeLines() {
-    lines.push_back(TextLine(L"我是D我会给你帮助"));
-    lines.push_back(TextLine(L"我会教你一些基本命令"));
-    lines.push_back(TextLine(L"我相信你一定能跑出去的"));
+void TextTerminal::InitializeLines(const std::vector<std::wstring>& inputLines) {
+    for (const auto& line : inputLines) {
+        lines.emplace_back(line);
+    }
 }
 
 void TextTerminal::SetTimerForLines() {
     SetTimer(hwnd, 1, CHAR_DELAY, TimerProc);
 }
 
-TextTerminal::TextTerminal() {
+TextTerminal::TextTerminal(const std::vector<std::wstring>& inputLines) {
     // 创建窗口类
     WNDCLASSEX wc = { 0 };
     wc.cbSize = sizeof(WNDCLASSEX);
@@ -105,6 +104,9 @@ TextTerminal::TextTerminal() {
         CW_USEDEFAULT, CW_USEDEFAULT, 600, 300,
         NULL, NULL, GetModuleHandle(NULL), this
     );
+
+    // 初始化文本行
+    InitializeLines(inputLines);
 
     // 显示窗口
     ShowWindow(hwnd, SW_SHOW);

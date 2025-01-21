@@ -1,4 +1,6 @@
 #include "TerminalMockup.h"
+#include "Maze.h"
+#include "TextTerminal.h"
 
 // 去除字符串前后的空格
 std::string trim(const std::string& str) {
@@ -44,6 +46,7 @@ TerminalMockup::TerminalMockup(const std::string& initialPath) : currentPath(ini
     commands["echo"] = &TerminalMockup::command_echo; // 关联 echo 命令
     commands["cat"] = &TerminalMockup::command_cat; // 关联 cat 命令
     commands["cd"] = &TerminalMockup::command_cd; // 映射 cd 命令
+    commands["hack"] = &TerminalMockup::command_hack; // 映射 cd 命令
 
     std::filesystem::current_path(currentPath); // 设置当前工作目录
     // 将路径转换为字符串，并记录为初始路径
@@ -63,6 +66,11 @@ void TerminalMockup::run() {
 
         executeCommand(input); // 执行输入的命令
     }
+}
+
+void TerminalMockup::findBoss()
+{
+    boss = 1;
 }
 
 // 执行输入的命令
@@ -132,5 +140,41 @@ void TerminalMockup::command_cd(const std::string& args) {
     }
     else {
         std::cout << "错误: 目录不存在: " << trimmedArgs << std::endl;
+    }
+}
+
+void TerminalMockup::command_hack(const std::string& args) {
+    if (!boss) {
+        std::cout << "Command not found: hack" << std::endl; // 未找到命令
+    }
+    else {
+        std::vector<std::vector<char>> providedMaze = { 
+            {'#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'}, 
+            {'#', '@', ' ', ' ', '$', '#', ' ', ' ', ' ', ' ', '#'}, 
+            {'#', '#', '#', ' ', '#', '#', '#', '#', '#', ' ', '#'}, 
+            {'#', ' ', ' ', ' ', ' ', ' ', ' ', '#', ' ', ' ', '#'}, 
+            {'#', '*', '#', '#', '#', '#', '#', '#', ' ', '#', '#'}, 
+            {'#', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', 'E', '#'}, 
+            {'#', '#', '#', '#', '#', '#', '#', '#', '#', '#', '#'} }; 
+        int width = 11; 
+        int height = 7; 
+        char command;
+        Maze maze2(width, height, MazeType::PROVIDED, providedMaze); 
+        std::vector<std::wstring> lines = {
+        L"快进攻服务系统",
+        L"没有时间了"
+        };
+
+        TextTerminal text(lines);
+        text.run();
+        while (true) {
+            system("cls");
+            maze2.displayMaze();
+            std::cout << "移动方向 (w: 上, s: 下, a: 左, d: 右, q: 退出): ";
+            command = _getch(); // 使用 _getch() 获取单个字符输入 
+            if (maze2.move(command)) {
+                break;
+            }
+        }
     }
 }

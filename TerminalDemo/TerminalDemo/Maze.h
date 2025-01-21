@@ -7,6 +7,7 @@
 #include <ctime>
 #include <algorithm>
 #include <random>
+#include <conio.h>
 
 /// <summary>
 /// 枚举表示迷宫的类型
