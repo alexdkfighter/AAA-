@@ -129,6 +129,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="cmd_print.cpp" />
+    <ClCompile Include="CountdownWindow.cpp" />
     <ClCompile Include="MatrixCipher.cpp" />
     <ClCompile Include="Maze.cpp" />
     <ClCompile Include="TerminalDemo.cpp">
@@ -140,6 +141,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cmd_print.h" />
+    <ClInclude Include="CountdownWindow.h" />
     <ClInclude Include="MatrixCipher.h" />
     <ClInclude Include="Maze.h" />
     <ClInclude Include="TerminalMockup.h" />

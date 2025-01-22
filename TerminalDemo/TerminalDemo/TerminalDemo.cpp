@@ -4,9 +4,10 @@
 	terminal.run();
 }*/
 
-#include "TerminalMockup.h"
+#include "CountdownWindow.h"
+
 int main() {
-	TerminalMockup terminal(".");
-	terminal.findBoss();
-	terminal.run();
+	CountdownWindow window(60); // 创建倒计时窗口，倒计时60秒
+	window.Run();              // 启动消息循环
+	return 0;
 }

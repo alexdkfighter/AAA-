@@ -36,6 +36,9 @@
     <ClCompile Include="TextTerminal.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="CountdownWindow.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TerminalMockup.h">
@@ -54,6 +57,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="TextTerminal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CountdownWindow.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
