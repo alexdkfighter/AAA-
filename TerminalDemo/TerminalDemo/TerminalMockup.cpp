@@ -1,6 +1,7 @@
 #include "TerminalMockup.h"
 #include "Maze.h"
 #include "TextTerminal.h"
+#include "CountdownWindow.h"
 
 // 去除字符串前后的空格
 std::string trim(const std::string& str) {
@@ -289,16 +290,20 @@ void TerminalMockup::command_hack(const std::string& args) {
         L"没有时间了"
         };
 
+        CountdownWindow time(360);
+
         TextTerminal text(lines);
         text.run();
-        while (true) {
+        std::thread targetThread(&CountdownWindow::Run, &time);
+        while (time.flag) {
             system("cls");
             maze2.displayMaze();
             std::cout << "移动方向 (w: 上, s: 下, a: 左, d: 右, q: 退出): ";
             command = _getch(); // 使用 _getch() 获取单个字符输入 
             if (maze2.move(command)) {
+                time.flag = 0;
                 break;
             }
-        }
+        }   
     }
 }

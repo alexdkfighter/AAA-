@@ -26,23 +26,6 @@ LRESULT CALLBACK CountdownWindow::WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam
     return DefWindowProc(hwnd, uMsg, wParam, lParam);
 }
 
-// 静态定时器回调函数
-VOID CALLBACK CountdownWindow::TimerProc(HWND hwnd, UINT uMsg, UINT_PTR idEvent, DWORD dwTime) {
-    CountdownWindow* pWindow = reinterpret_cast<CountdownWindow*>(GetWindowLongPtr(hwnd, GWLP_USERDATA));
-    if (pWindow && !pWindow->isCountdownComplete) {
-        if (pWindow->remainingSeconds > 0) {
-            pWindow->remainingSeconds--;
-            InvalidateRect(hwnd, NULL, TRUE);
-        }
-        else {
-            KillTimer(hwnd, idEvent);
-            pWindow->isCountdownComplete = true;
-            DestroyWindow(hwnd);
-            exit(0); // 终止程序
-        }
-    }
-}
-
 // 处理 WM_PAINT 消息
 void CountdownWindow::OnPaint() {
     PAINTSTRUCT ps;
@@ -84,6 +67,7 @@ void CountdownWindow::OnDestroy() {
 CountdownWindow::CountdownWindow(int seconds) : remainingSeconds(seconds), isCountdownComplete(false) {
     hInstance = GetModuleHandle(NULL);
 
+    flag = 1;
     WNDCLASSEX wc = { 0 };
     wc.cbSize = sizeof(WNDCLASSEX);
     wc.lpfnWndProc = WindowProc;
@@ -115,10 +99,28 @@ CountdownWindow::~CountdownWindow() {
     }
 }
 
+// 静态定时器回调函数
+VOID CALLBACK CountdownWindow::TimerProc(HWND hwnd, UINT uMsg, UINT_PTR idEvent, DWORD dwTime) {
+    CountdownWindow* pWindow = reinterpret_cast<CountdownWindow*>(GetWindowLongPtr(hwnd, GWLP_USERDATA));
+    if (pWindow && !pWindow->isCountdownComplete) {
+        if (pWindow->flag == 0 || pWindow->remainingSeconds <= 0) {
+            KillTimer(hwnd, idEvent);
+            pWindow->isCountdownComplete = true;
+            pWindow->flag = 0; // 设置flag为0
+            DestroyWindow(hwnd);
+            // exit(0); // 通常不建议在此处直接终止程序
+        }
+        else {
+            pWindow->remainingSeconds--;
+            InvalidateRect(hwnd, NULL, TRUE);
+        }
+    }
+}
+
 // 启动消息循环
 void CountdownWindow::Run() {
     MSG msg = { 0 };
-    while (GetMessage(&msg, NULL, 0, 0)) {
+    while (GetMessage(&msg, NULL, 0, 0) && flag != 0) {
         TranslateMessage(&msg);
         DispatchMessage(&msg);
     }

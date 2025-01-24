@@ -27,6 +27,8 @@ public:
 
     // 启动消息循环
     void Run();
+
+    int flag;
 };
 
 #endif // COUNTDOWNWINDOW_H

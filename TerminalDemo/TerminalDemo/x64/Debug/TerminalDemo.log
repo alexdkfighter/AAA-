@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 ﻿  CountdownWindow.cpp
-  TerminalDemo.cpp
+  TerminalMockup.cpp
   正在生成代码...
   TerminalDemo.vcxproj -> E:\git\TerminalDemo\boss\TerminalDemo\x64\Debug\TerminalDemo.exe
-=======
-﻿  TerminalDemo.cpp
-  TerminalDemo.vcxproj -> D:\git1\AAA-\AAA-\TerminalDemo\x64\Debug\TerminalDemo.exe
->>>>>>> 1a916709aee4c95f97145047bd20821ea4830779
