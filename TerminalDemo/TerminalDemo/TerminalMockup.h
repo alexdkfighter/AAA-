@@ -18,6 +18,9 @@ private:
     void command_cd(const std::string& args); // 模拟 cd 命令
     void command_hack(const std::string& args); // boss战开始指令
 
+    std::string autocomplete(const std::string& input); // 自动补全
+    std::string autocompleteCommand(const std::string& command); // 命令补全
+    std::string autocompletePath(const std::string& input); //补全文件
     std::map<std::string, void (TerminalMockup::*)(const std::string&)> commands; // 命令映射
     std::filesystem::path currentPath; // 当前工作目录
     std::string currentPathStr; // 初始工作目录

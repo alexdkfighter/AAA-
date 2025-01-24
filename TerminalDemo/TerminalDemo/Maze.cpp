@@ -119,7 +119,8 @@ int Maze::move(char direction) {
 
         TextTerminal text(lines);
         text.run();
-        TerminalMockup Dterminal(".");
+        TerminalMockup Dterminal(".\\terminal\\D");
+        system("chcp 65001");
         Dterminal.run();
         return 0;
     }

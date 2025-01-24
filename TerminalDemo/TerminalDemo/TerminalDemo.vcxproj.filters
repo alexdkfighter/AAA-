@@ -30,10 +30,10 @@
     <ClCompile Include="MatrixCipher.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="TimeApp.cpp">
+    <ClCompile Include="TextTerminal.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="TextTerminal.cpp">
+    <ClCompile Include="CountdownWindow.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -50,10 +50,10 @@
     <ClInclude Include="MatrixCipher.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="TimeApp.h">
+    <ClInclude Include="TextTerminal.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="TextTerminal.h">
+    <ClInclude Include="CountdownWindow.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

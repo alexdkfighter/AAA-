@@ -4,9 +4,10 @@
 	terminal.run();
 }*/
 
+
 #include "TerminalMockup.h"
 int main() {
-	TerminalMockup terminal(".");
+	TerminalMockup terminal(".\\terminal\\D");
 	terminal.findBoss();
 	terminal.run();
 }

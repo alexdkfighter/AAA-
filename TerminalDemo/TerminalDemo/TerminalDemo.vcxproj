@@ -129,6 +129,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="cmd_print.cpp" />
+    <ClCompile Include="CountdownWindow.cpp" />
     <ClCompile Include="MatrixCipher.cpp" />
     <ClCompile Include="Maze.cpp" />
     <ClCompile Include="TerminalDemo.cpp">
@@ -136,15 +137,14 @@
     </ClCompile>
     <ClCompile Include="TerminalMockup.cpp" />
     <ClCompile Include="TextTerminal.cpp" />
-    <ClCompile Include="TimeApp.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cmd_print.h" />
+    <ClInclude Include="CountdownWindow.h" />
     <ClInclude Include="MatrixCipher.h" />
     <ClInclude Include="Maze.h" />
     <ClInclude Include="TerminalMockup.h" />
     <ClInclude Include="TextTerminal.h" />
-    <ClInclude Include="TimeApp.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
